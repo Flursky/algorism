@@ -1,0 +1,7 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        tutorial.banners:
+            uri_prefix: /images/tutorials/banners
+            upload_destination: '%app.path.tutorial.banner%'
