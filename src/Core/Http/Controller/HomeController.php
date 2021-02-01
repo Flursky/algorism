@@ -3,17 +3,18 @@
 
 namespace App\Core\Http\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
 /**
  * Class HomeController
  * @package App\Core\Http\Controller
  * @Route(path="/")
  */
-class HomeController
+class HomeController extends AbstractController
 {
-    public function __invoke()
+    public function __invoke(): Response
     {
-        return 'hello world';
+        return $this->render('home/index.html.twig');
     }
 }

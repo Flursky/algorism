@@ -6,6 +6,11 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import 'froala-design-blocks/dist/css/froala_blocks.min.css'
 import './styles/app.css';
 
 // start the Stimulus application
