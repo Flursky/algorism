@@ -6,7 +6,7 @@
 parameters:
     app.upload_dir: '%kernel.project_dir%/uploads'
     app.path.tutorial.banner: '%app.upload_dir%/images/tutorial/banner'
-    is_locked: false
+    is_locked: true
 
 services:
     # default configuration for services in *this* file
