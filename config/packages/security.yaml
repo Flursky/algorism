@@ -2,7 +2,6 @@ security:
     encoders:
         App\Domain\Auth\User:
             algorithm: auto
-
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         # used to reload user from session & other features (e.g. switch_user)
@@ -20,7 +19,7 @@ security:
             provider: app_user_provider
             guard:
                 authenticators:
-                    - App\Core\Security\Authenticator
+                    - App\Infrastructure\Security\Authenticator
             logout:
                 path: app_logout
                 # where to redirect after logout

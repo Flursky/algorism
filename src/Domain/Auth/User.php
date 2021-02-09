@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id
@@ -89,6 +89,10 @@ class User
         return (string) $this->password;
     }
 
+    /**
+     * @param Password $password
+     * @return $this
+     */
     public function setPassword(Password $password): self
     {
         $this->password = $password;
@@ -96,4 +100,16 @@ class User
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
+    public function getSalt(): ?string
+    {
+        return null;
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
 }

@@ -66,6 +66,17 @@ class Password
     }
 
     /**
+     * @param mixed $user
+     * @return Password
+     */
+    public function setUser($user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function __toString(): string {
