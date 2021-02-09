@@ -2,7 +2,7 @@
 
 namespace App\Domain\Auth;
 
-use App\Domain\Repository\UserRepository;
+use App\Domain\Auth\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
