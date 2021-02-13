@@ -114,6 +114,7 @@ class Tutorial
     }
 
     /**
+     * @return $this
      */
     public function setUpdatedAt(): self
     {
@@ -121,4 +122,5 @@ class Tutorial
 
         return $this;
     }
+
 }

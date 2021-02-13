@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Core\Http\Controller;
+namespace App\Http\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

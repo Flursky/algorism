@@ -6,7 +6,9 @@
 parameters:
     app.upload_dir: '%kernel.project_dir%/uploads'
     app.path.tutorial.banner: '%app.upload_dir%/images/tutorial/banner'
-    is_locked: true
+    app.path.review.banner: '%app.upload_dir%/images/review/banner'
+    app.path.review.slide: '%app.upload_dir%/images/review/slide'
+    is_locked: false
 
 services:
     # default configuration for services in *this* file
@@ -26,13 +28,13 @@ services:
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
-    App\Core\Http\Controller\:
-        resource: '../src/Core/Http/Controller'
+    App\Http\:
+        resource: '../src/Http'
         tags: ['controller.service_arguments']
 
 
     maintenace_listener:
-        class: App\Core\Event\MaintenanceListener
+        class: App\Infrastructure\Event\MaintenanceListener
         arguments:
             - "@twig"
             - '%is_locked%'

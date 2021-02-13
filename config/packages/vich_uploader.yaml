@@ -5,3 +5,8 @@ vich_uploader:
         tutorial.banners:
             uri_prefix: /images/tutorials/banners
             upload_destination: '%app.path.tutorial.banner%'
+        review.banners:
+            uri_prefix: /images/reviews/banners
+            upload_destination: '%app.path.review.banner%'
+        review.slides:
+            upload_destination: '%app.path.review.slide%'

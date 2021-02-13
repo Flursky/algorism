@@ -1,8 +1,6 @@
 <?php
 
-
-namespace App\Core\Event;
-
+namespace App\Infrastructure\Event;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
@@ -28,8 +26,7 @@ class MaintenanceListener
         if (!$this->isLocked) {
             return;
         }
-
-
+        // TODO: create custom maintenance page
         $event->setResponse(
             new Response("Website In Maintenance", Response::HTTP_SERVICE_UNAVAILABLE)
         );

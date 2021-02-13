@@ -1,2 +1,0 @@
-## TODO
-- Custom maintenance page
